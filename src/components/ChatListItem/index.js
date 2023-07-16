@@ -1,5 +1,8 @@
-import { View, Text, Image, StyleSheet } from 'react-native'
-import React from 'react'
+import { View, Text, Image, StyleSheet } from 'react-native';
+import React from 'react';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+dayjs.extend(relativeTime);
 
 const ChatListItem = ({chat}) => {
   return (
@@ -16,7 +19,7 @@ const ChatListItem = ({chat}) => {
           >
           {chat.user.name}
           </Text>
-          <Text style={styles.subTitle}>{chat.lastMessage.createdAt}</Text>
+          <Text style={styles.subTitle}>{dayjs(chat.lastMessage.createdAt).fromNow(true)}</Text>
         </View>
         
         <Text 
@@ -30,7 +33,15 @@ const ChatListItem = ({chat}) => {
         
   )
 }
-//With numberOfLines={1} ile we can arrange the maximum line that we can see on the screen.
+/*
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+dayjs.extend(relativeTime);
+{dayjs(chat.lastMessage.createdAt).fromNow(true)}
+While stretching the last messages sent from the backend, they come in a different format. We write the above 4 lines to process it.
+With numberOfLines={1} ile we can arrange the maximum line that we can see on the screen.
+*/
+
 const styles = StyleSheet.create({
     container:{
       flexDirection: 'row', //It puts the children that it contain on the same row.  
