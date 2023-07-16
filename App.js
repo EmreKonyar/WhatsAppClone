@@ -1,10 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import ChatsScreen from './src/screens/ChatsScreen';
+import ChatScreen from './src/screens/ChatScreen';
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <ChatsScreen />
+      <ChatScreen />
       <StatusBar style="auto" />
     </View>
   );
@@ -16,6 +18,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     justifyContent: 'center',
 
-    paddingVertical: 30, //Ekranın üstünden boşluk bıraktık.
+    paddingVertical: 30, //We put a gap under the screen.
   },
 });
