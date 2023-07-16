@@ -31,37 +31,37 @@ const ChatListItem = () => {
         
   )
 }
-//Koyduğumu numberOfLines={1} ile gözükebilecek maximuım satır sayısını 1 yaptık.
+//With numberOfLines={1} ile we can arrange the maximum line that we can see on the screen.
 const styles = StyleSheet.create({
     container:{
-      flexDirection: 'row', //İçerdiği childrenları yani Image ve atlıdnaki View u aynı rowa koydu.  
-      marginHorizontal: 10, //İçeriklerini ekranın sağından ve solundan 10 kadar uzaklaştırdı.
-      marginVertical: 5,//İçeriklerine aşağıdan veya yukarıdan 5 kadar uzaklaştırdı.
+      flexDirection: 'row', //It puts the children that it contain on the same row.  
+      marginHorizontal: 10, //It puts a gap horizontally.
+      marginVertical: 5,//It puts a gap vertically.
       height: 70
     },
     image:{
-        width: 60, //Enine boyutunu ayarladık
-        height: 60, //Boyuna boyutunu ayarladık.
-        borderRadius: 30, // İçeriğin köşelerini yuvarlak hale getirdik.
-        marginRight: 10, //Image öğesinin sağ tarafına gelecekleri 10 kadar uzaklaştırdık.
+        width: 60, //Arrange the horizontal size.
+        height: 60, //Arrange the vertical size.
+        borderRadius: 30, //Allows us to round the corners of the content.
+        marginRight: 10, //It put a space between whatever comes to the right of the image.
     },
     content:{
-        flex: 1,//Boşluk Bırakmayacak şekilde sola doğru yapıştı.
+        flex: 1,//
         borderBottomWidth: StyleSheet.hairlineWidth,
         borderBottomColor: 'lightgray',
-        //Chat list ıtemın altına gri bir çizgi koymamızı sağladı. StyleSheet li kısım ise alabilecek en küçük değeri vermemizi sağladı.
+        //Allow us to put a gray line under the content and allow us to give it the smallest possible value.
     },
     row:{
-        flexDirection: 'row', //İçeriğindeki isim ve zamanı aynı satıra aldık.
-        marginBottom: 5, //İsimin altına gelenlere ile isim arasına 5 kadar boşluk bıraktık.
+        flexDirection: 'row', //We put the name and the time on a same row.
+        marginBottom: 5, //We put a gap between name and whatever comes under the image.
     },
     name:{
-        flex: 1, //İsim bırakılan tüm boşluğu kullandı sadece zamana yetece kkadar bir boşluk bıraktı ve zaman en sağa dayanmış oldu.
-        fontWeight: 'bold', //Yazının fontunu kalınlaştırdık.
+        flex: 1, //The name used all the space left, only enough space for the time, and the time reached the far right
+        fontWeight: 'bold', //We thickened the font of the text.
 
     },
     subTitle:{
-        color: 'gray', //Renk değiştirdik.
+        color: 'gray', //We changed color.
     },
 })
 
