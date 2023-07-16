@@ -1,12 +1,11 @@
 import { View, Text, Image, StyleSheet } from 'react-native'
 import React from 'react'
-import Gecici from '../../../assets/UniCoLogo.png'
 
-const ChatListItem = () => {
+const ChatListItem = ({chat}) => {
   return (
     <View style={styles.container}>
       <Image 
-        source={Gecici}
+        source={{uri: chat.user.image}}
         style={styles.image}
       />
       <View style={styles.content}>
@@ -15,16 +14,16 @@ const ChatListItem = () => {
           style={styles.name}
           numberOfLines={1}
           >
-          Lukas
+          {chat.user.name}
           </Text>
-          <Text style={styles.subTitle}>8:30</Text>
+          <Text style={styles.subTitle}>{chat.lastMessage.createdAt}</Text>
         </View>
         
         <Text 
         style={styles.subTitle}
         numberOfLines={1}
         >
-        Hello there
+        {chat.lastMessage.text}
         </Text>
       </View>
     </View>
