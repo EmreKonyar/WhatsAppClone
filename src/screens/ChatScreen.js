@@ -5,10 +5,7 @@ import messages from '../../assets/data/messages.json';
 import InputBox from '../components/InputBox';
 const ChatScreen = () => {
   return (
-    <KeyboardAvoidingView 
-      behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
-      style={styles.bg}
-    >
+    
       <ImageBackground
       source={bg}
       style={StyleSheet.bg}
@@ -21,7 +18,7 @@ const ChatScreen = () => {
         /> 
         <InputBox />
       </ImageBackground>  
-    </KeyboardAvoidingView>
+    
   )
 }
 
@@ -32,6 +29,7 @@ const styles = StyleSheet.create({
     },
     list:{
       padding: 10,
+      
     },
 })
 

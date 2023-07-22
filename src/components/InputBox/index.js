@@ -29,10 +29,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'whitesmoke',
         padding: 5,
         paddingHorizontal: 10,
-        alignItems: 'center' //+ işaretini ortaladık
+        alignItems: 'center' //We have centered the + sign.
     },
     input:{
-        flex: 1, //Sadece geriye kalanlara boyutları kadar yer bırakıp kalan her yeri kendisi kaplıyor.
+        flex: 1, //It just leaves room for the rest of its size and takes up everything that's left.
         backgroundColor: 'white',
         padding: 5,
         paddingHorizontal:10,
@@ -45,10 +45,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'royalblue',
         padding: 7,
         borderRadius: 15,
-        overflow: 'hidden', //Send butonunun borderRadius verdiğimizde gözükmediği için ekledik.
+        overflow: 'hidden', //There are cases where the Send button does not work on the image when we give the borderRadius. We used it to solve this problem.
     },
 })
 
 export default InputBox
 
-//https://icons.expo.fyi/Index iconlar buradan alındı, KeyboardAvoidingView konuldu chatscreen e bunları worde ekle ve notunu al.
+//https://icons.expo.fyi/Index Icons taken from here.
