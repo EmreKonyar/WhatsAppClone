@@ -1,12 +1,19 @@
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
 import React from 'react';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 dayjs.extend(relativeTime);
+import { useNavigation } from '@react-navigation/native';
 
 const ChatListItem = ({chat}) => {
+
+  const navigation = useNavigation();
+//navigate e eklediğimiz parametreler ile tıkladığımız chatin bilgilerini gönderiyoruz. ChatScreen de route ile bu bilgileri çekiyoruz.
   return (
-    <View style={styles.container}>
+    <Pressable 
+      onPress={() => navigation.navigate('Chat', {id: chat.id, name: chat.user.name})}
+      style={styles.container}
+    >
       <Image 
         source={{uri: chat.user.image}}
         style={styles.image}
@@ -24,12 +31,12 @@ const ChatListItem = ({chat}) => {
         
         <Text 
         style={styles.subTitle}
-        numberOfLines={1}
+        numberOfLines={2}
         >
         {chat.lastMessage.text}
         </Text>
       </View>
-    </View>
+    </Pressable>
         
   )
 }

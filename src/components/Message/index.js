@@ -7,7 +7,7 @@ const Message = ({message}) => {
 
     const isMyMessage = () => {
         return message.user.id == 'u1';
-    }
+    };
 
   return (
     <View 
@@ -15,7 +15,7 @@ const Message = ({message}) => {
         styles.container, 
         {
             backgroundColor: isMyMessage() ? '#DCF8C5' : 'white', 
-            alignSelf: isMyMessage() ? 'flex-end' : 'flex-start'
+            alignSelf: isMyMessage() ? 'flex-end' : 'flex-start',
         },
       ]}
     >
@@ -49,6 +49,6 @@ const styles = StyleSheet.create({
         color: 'gray',
         alignSelf: 'flex-end',//It makes the text showing the time appear on the far right of the page.
     },
-})
+});
 
 export default Message;
