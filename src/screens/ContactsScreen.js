@@ -1,5 +1,5 @@
-import React from 'react'
-import { View, Text, FlatList } from 'react-native';
+import React from 'react';
+import { FlatList } from 'react-native';
 import chats from '../../assets/data/chats.json';
 import ContactListItem from '../components/ContactListItem';
 
@@ -10,7 +10,7 @@ const ContactsScreen = () => {
       renderItem={({item}) => < ContactListItem user={item.user}/>}
       style={{backgroundColor: 'white'}}
     />
-  )
-}
+  );
+};
 
-export default ContactsScreen
+export default ContactsScreen;

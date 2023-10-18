@@ -9,14 +9,12 @@ export default function App() {
       <StatusBar style="auto" />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'whitesmoke',
     justifyContent: 'center',
-
-    //paddingVertical: 30, //We put a gap under the screen. Commente aldık çünkü safeareaview kullanıcaz.
   },
 });

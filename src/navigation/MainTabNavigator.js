@@ -71,8 +71,7 @@ const MainTabNavigator = () => {
             }}
         />
     </Tab.Navigator>
-  )
-}
+  );
+};
 
 export default MainTabNavigator
-//chats screen deki options a navigation parametresi vererek entypo iconuna onpress vermeyi sağladık.

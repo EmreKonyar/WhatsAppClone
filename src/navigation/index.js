@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import ChatScreen from '../screens/ChatScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -6,7 +6,7 @@ import MainTabNavigator from './MainTabNavigator';
 import ContactsScreen from '../screens/ContactsScreen';
 
 const Stack = createNativeStackNavigator();
-//HeaderShown false ile çift başlık sorunundan kurtulduk.
+
 const Navigator = () => {
   return (
     <NavigationContainer>

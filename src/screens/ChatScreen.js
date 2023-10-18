@@ -1,22 +1,20 @@
-import { ImageBackground, StyleSheet,FlatList, KeyboardAvoidingView, Platform } from 'react-native'
-import bg from '../../assets/images/BG.png'
-import Message from '../components/Message'
+import { ImageBackground, StyleSheet,FlatList, KeyboardAvoidingView, Platform } from 'react-native';
+import bg from '../../assets/images/BG.png';
+import Message from '../components/Message';
 import messages from '../../assets/data/messages.json';
 import InputBox from '../components/InputBox';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import { useEffect } from 'react';
 
 const ChatScreen = () => {
-//Yazdığımız route bilgileri çekmemize yarıyor.
+
   const route = useRoute();
   const navigation = useNavigation();
 
   useEffect(() => {
     navigation.setOptions({title: route.params.name});
   }, [route.params.name]);
-  //route.params.name değiştikçe navigation daki işlemi yap dedik.
   
-
   return (
     <KeyboardAvoidingView 
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'} 
@@ -37,10 +35,9 @@ const ChatScreen = () => {
         <InputBox />
       </ImageBackground>  
     </KeyboardAvoidingView>
-  )
-}
+  );
+};
 
-//inverted will allow us to print the list in reverse.
 const styles = StyleSheet.create({
     bg:{
       flex: 1,
@@ -48,6 +45,6 @@ const styles = StyleSheet.create({
     list:{
       padding: 10,
     },
-})
+});
 
-export default ChatScreen
+export default ChatScreen;

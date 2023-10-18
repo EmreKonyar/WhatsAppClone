@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, StyleSheet, TextInput } from 'react-native'
+import { StyleSheet, TextInput } from 'react-native';
 import {AntDesign, MaterialIcons} from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -31,10 +31,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'whitesmoke',
         padding: 5,
         paddingHorizontal: 10,
-        alignItems: 'center', //We have centered the + sign.
+        alignItems: 'center', 
     },
     input:{
-        flex: 1, //It just leaves room for the rest of its size and takes up everything that's left.
+        flex: 1, 
         backgroundColor: 'white',
         padding: 5,
         paddingHorizontal:10,
@@ -47,10 +47,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'royalblue',
         padding: 7,
         borderRadius: 15,
-        overflow: 'hidden', //There are cases where the Send button does not work on the image when we give the borderRadius. We used it to solve this problem.
+        overflow: 'hidden',
     },
-})
+});
 
-export default InputBox
-
-//https://icons.expo.fyi/Index Icons taken from here.
+export default InputBox;
